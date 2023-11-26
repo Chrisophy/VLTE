@@ -59,8 +59,6 @@ plugin://plugin.video.dazn/?mode=play&title=Eurosport+2&id=1glc8nr85cpa21r4ahv80
 plugin://plugin.video.vavooto/?name=FIX+%26+FOXI
 #EXTINF:-1 tvg-id="GEO Television" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/lightbg/60x60/1448.png",Geo
 plugin://plugin.video.vavooto/?name=GEO+TV
-#EXTINF:-1 tvg-id="gotv" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1050.png",Go tv
-plugin://plugin.video.vavooto/?name=GOTV
 #EXTINF:-1 tvg-id="Heimatkanal" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/498.png",Heimatkanal
 plugin://plugin.video.vavooto/?name=HEIMATKANAL
 #EXTINF:-1 tvg-id="History HD" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/542.png",History
