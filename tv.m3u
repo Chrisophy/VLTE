@@ -37,9 +37,9 @@ plugin://plugin.video.vavooto/?name=VIVA
 plugin://plugin.video.vavooto/?name=A%26E
 #EXTINF:-1 tvg-id="Das Erste" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1016.png",Das Erste
 plugin://plugin.video.vavooto/?name=ARD+-+DAS+ERSTE
-#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/DAZN.png",DAZN1
+#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/DAZN.png",DAZN-1
 plugin://plugin.video.vavooto/?name=DAZN+1
-#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/DAZN.png",DAZN2
+#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/DAZN.png",DAZN-2
 plugin://plugin.video.vavooto/?name=DAZN+2
 #EXTINF:-1 tvg-id="DELUXE MUSIC" group-title="Alle" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1034.png",DELUXE MUSIC
 plugin://plugin.video.vavooto/?name=DELUXE MUSIC
