@@ -23,9 +23,9 @@ plugin://plugin.video.vavooto/?name=AUTO+MOTOR+SPORT
 plugin://plugin.video.vavooto/?name=BILD+TV
 #EXTINF:-1 tvg-id="BR" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/959.png",BR
 plugin://plugin.video.vavooto/?name=BR
-#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-1-de.png",BL 1
+#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-1-de.png",BL-1
 plugin://plugin.video.vavooto/?name=SKY+BUNDESLIGA+1
-#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-2-de.png",BL 2
+#EXTINF:-1 tvg-id="" group-title="Standard" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-2-de.png",BL-2
 plugin://plugin.video.vavooto/?name=SKY+BUNDESLIGA+2
 #EXTINF:-1 tvg-id="Cartoon Network" group-title="Standard" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1032.png",Cartoon Network
 plugin://plugin.video.vavooto/?name=CARTOON+NETWORK
