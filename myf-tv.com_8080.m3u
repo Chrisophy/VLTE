@@ -1,0 +1,61 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="Das Erste" tvg-name="ARD" tvg-logo="https://picon-13398.kxcdn.com/daserstehd.jpg" group-title="", ARD
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231072&extension=ts&play_token=4521Lnt49o&sn2=
+
+#EXTINF:-1 tvg-id="ZDF" tvg-name="ZDF" tvg-logo="https://picon-13398.kxcdn.com/zdf.jpg" group-title="", ZDF
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58143&extension=ts&play_token=4o11Jpf1Py&sn2=
+
+#EXTINF:-1 tvg-id="ZDFneo" tvg-name="ZDFneo" tvg-logo="https://picon-13398.kxcdn.com/zdfneohd.jpg" group-title="", ZDFneo
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58186&extension=ts&play_token=eg2C7kcA6I&sn2=
+
+#EXTINF:-1 tvg-id="RTL" tvg-name="RTL" tvg-logo="https://picon-13398.kxcdn.com/rtlfs.jpg" group-title="", RTL
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58145&extension=ts&play_token=gYnxxFlCcs&sn2=
+
+#EXTINF:-1 tvg-id="RTL II" tvg-name="RTL II" tvg-logo="https://picon-13398.kxcdn.com/rtl2.jpg" group-title="", RTL II
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58142&extension=ts&play_token=xkWeGmUS4s&sn2=
+
+#EXTINF:-1 tvg-id="ProSieben" tvg-name="ProSieben" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/PRO7.png" group-title="", ProSieben
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58150&extension=ts&play_token=COq0uFeJFL&sn2=
+
+#EXTINF:-1 tvg-id="ProSieben MAXX" tvg-name="ProSieben MAXX" tvg-logo="https://picon-13398.kxcdn.com/prosiebenmaxx.jpg" group-title="", ProSieben MAXX
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58155&extension=ts&play_token=DimlN9kKSX&sn2=
+
+#EXTINF:-1 tvg-id="SAT.1" tvg-name="SAT.1" tvg-logo="https://picon-13398.kxcdn.com/sat1hd.jpg" group-title="", SAT.1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231070&extension=ts&play_token=79K1ei9QzP&sn2=
+
+#EXTINF:-1 tvg-id="SAT.1 Gold" tvg-name="SAT.1 Gold" tvg-logo="https://picon-13398.kxcdn.com/sat1gold.jpg" group-title="", SAT.1 Gold
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58152&extension=ts&play_token=dvkC6fhoTC&sn2=
+
+#EXTINF:-1 tvg-id="VOX" tvg-name="VOX" tvg-logo="https://picon-13398.kxcdn.com/voxhd.jpg" group-title="", VOX
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58154&extension=ts&play_token=c8qdrmCS0D&sn2=
+
+#EXTINF:-1 tvg-id="kabel eins" tvg-name="kabel eins" tvg-logo="https://picon-13398.kxcdn.com/kabeleinshd.jpg" group-title="", Kabel eins
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58156&extension=ts&play_token=PkYO2Y8ZA9&sn2=
+
+#EXTINF:-1 tvg-id="kabel eins classics" tvg-name="kabel eins classics" tvg-logo="https://picon-13398.kxcdn.com/kabeleinsclassics.jpg" group-title="", Kabel eins Classics
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58181&extension=ts&play_token=i2vCkhcQKo&sn2=
+
+#EXTINF:-1 tvg-id="Tele 5" tvg-name="Tele 5" tvg-logo="https://picon-13398.kxcdn.com/tele5de.jpg" group-title="", Tele 5
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58157&extension=ts&play_token=GGfrF124ns&sn2=
+
+#EXTINF:-1 tvg-id="ARTE" tvg-name="ARTE" tvg-logo="https://picon-13398.kxcdn.com/artehd.jpg" group-title="", ARTE
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58162&extension=ts&play_token=7oCMXx5rNt&sn2=
+
+#EXTINF:-1 tvg-id="n-tv" tvg-name="n-tv" tvg-logo="https://picon-13398.kxcdn.com/n-tvde.jpg" group-title="", n-tv
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58167&extension=ts&play_token=RcuYajUQdJ&sn2=
+
+#EXTINF:-1 tvg-id="Spiegel Geschichte" tvg-name="Spiegel Geschichte" tvg-logo="https://picon-13398.kxcdn.com/spiegelgeschichtede.jpg" group-title="", Spiegel Geschichte
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58175&extension=ts&play_token=IAx1z5r194&sn2=
+
+#EXTINF:-1 tvg-id="ONE" tvg-name="ONEe" tvg-logo="https://picon-13398.kxcdn.com/onehd.jpg" group-title="", ONE
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58187&extension=ts&play_token=nVFtsaccCZ&sn2=
+
+#EXTINF:-1 tvg-id="Welt der Wunder TV" tvg-name="Welt der Wunder TV" tvg-logo="https://picon-13398.kxcdn.com/weltderwunder.jpg" group-title="", Welt der Wunder TV
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58183&extension=ts&play_token=r32PbYPAot&sn2=
+
+#EXTINF:-1 tvg-id="KiKA" tvg-name="KiKA" tvg-logo="https://picon-13398.kxcdn.com/kika.jpg" group-title="", KiKA
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58172&extension=ts&play_token=pIEPMmP3Hh&sn2=
+
+#EXTINF:-1 tvg-id="DELUXE MUSIC" tvg-name="DELUXE MUSIC" tvg-logo="https://picon-13398.kxcdn.com/deluxemusichd.jpg" group-title="", DELUXE MUSIC
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58168&extension=ts&play_token=wDxd5IE7yH&sn2=
+ 
