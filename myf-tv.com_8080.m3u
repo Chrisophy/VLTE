@@ -1,0 +1,186 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="Das Erste" tvg-name="ARD" tvg-logo="https://picon-13398.kxcdn.com/daserstehd.jpg" group-title="", ARD
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231072&extension=ts&play_token=4521Lnt49o&sn2=
+
+#EXTINF:-1 tvg-id="ZDF" tvg-name="ZDF" tvg-logo="https://picon-13398.kxcdn.com/zdf.jpg" group-title="", ZDF
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58143&extension=ts&play_token=4o11Jpf1Py&sn2=
+
+#EXTINF:-1 tvg-id="ZDFneo" tvg-name="ZDFneo" tvg-logo="https://picon-13398.kxcdn.com/zdfneohd.jpg" group-title="", ZDFneo
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58186&extension=ts&play_token=eg2C7kcA6I&sn2=
+
+#EXTINF:-1 tvg-id="RTL" tvg-name="RTL" tvg-logo="https://picon-13398.kxcdn.com/rtlfs.jpg" group-title="", RTL
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58145&extension=ts&play_token=gYnxxFlCcs&sn2=
+
+#EXTINF:-1 tvg-id="RTL II" tvg-name="RTL II" tvg-logo="https://picon-13398.kxcdn.com/rtl2.jpg" group-title="", RTL II
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58142&extension=ts&play_token=xkWeGmUS4s&sn2=
+
+#EXTINF:-1 tvg-id="RTL Crime" tvg-name="RTL Crime" tvg-logo="https://picon-13398.kxcdn.com/rtlcrimehd.jpg" group-title="", RTL Crime
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58224&extension=ts&play_token=rE5m7zu768&sn2=
+
+#EXTINF:-1 tvg-id="RTL Living" tvg-name="RTL Living" tvg-logo="https://picon-13398.kxcdn.com/rtlliving.jpg" group-title="", RTL Living
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58225&extension=ts&play_token=dBIBDTRb5N&sn2=
+
+#EXTINF:-1 tvg-id="RTL Passion" tvg-name="RTL Passion" tvg-logo="https://picon-13398.kxcdn.com/rtlpassion.jpg" group-title="", RTL Passion
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58227&extension=ts&play_token=OBun0ueALJ&sn2=
+
+#EXTINF:-1 tvg-id="ProSieben" tvg-name="ProSieben" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/PRO7.png" group-title="", ProSieben
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58150&extension=ts&play_token=COq0uFeJFL&sn2=
+
+#EXTINF:-1 tvg-id="ProSieben MAXX" tvg-name="ProSieben MAXX" tvg-logo="https://picon-13398.kxcdn.com/prosiebenmaxx.jpg" group-title="", ProSieben MAXX
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58155&extension=ts&play_token=DimlN9kKSX&sn2=
+
+#EXTINF:-1 tvg-id="ProSieben Fun" tvg-name="ProSieben Fun" tvg-logo="https://picon-13398.kxcdn.com/prosiebenfunhd.jpg" group-title="", ProSieben Fun
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231055&extension=ts&play_token=qC0Zdzhm5U&sn2=
+
+#EXTINF:-1 tvg-id="SAT.1" tvg-name="SAT.1" tvg-logo="https://picon-13398.kxcdn.com/sat1hd.jpg" group-title="", SAT.1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231070&extension=ts&play_token=79K1ei9QzP&sn2=
+
+#EXTINF:-1 tvg-id="SAT.1 Gold" tvg-name="SAT.1 Gold" tvg-logo="https://picon-13398.kxcdn.com/sat1gold.jpg" group-title="", SAT.1 Gold
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58152&extension=ts&play_token=dvkC6fhoTC&sn2=
+
+#EXTINF:-1 tvg-id="VOX" tvg-name="VOX" tvg-logo="https://picon-13398.kxcdn.com/voxhd.jpg" group-title="", VOX
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58154&extension=ts&play_token=c8qdrmCS0D&sn2=
+
+#EXTINF:-1 tvg-id="kabel eins" tvg-name="kabel eins" tvg-logo="https://picon-13398.kxcdn.com/kabeleinshd.jpg" group-title="", Kabel eins
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58156&extension=ts&play_token=PkYO2Y8ZA9&sn2=
+
+#EXTINF:-1 tvg-id="kabel eins classics" tvg-name="kabel eins classics" tvg-logo="https://picon-13398.kxcdn.com/kabeleinsclassics.jpg" group-title="", Kabel eins Classics
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58181&extension=ts&play_token=i2vCkhcQKo&sn2=
+
+#EXTINF:-1 tvg-id="Tele 5" tvg-name="Tele 5" tvg-logo="https://picon-13398.kxcdn.com/tele5de.jpg" group-title="", Tele 5
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58157&extension=ts&play_token=GGfrF124ns&sn2=
+
+#EXTINF:-1 tvg-id="Universal Channel HD" tvg-name="Universal Channel" tvg-logo="https://picon-13398.kxcdn.com/universalchannelhd.jpg" group-title="", Universal Channel
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231037&extension=ts&play_token=24zxr7MqDw&sn2=
+
+#EXTINF:-1 tvg-id="ARTE" tvg-name="ARTE" tvg-logo="https://picon-13398.kxcdn.com/artehd.jpg" group-title="", ARTE
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58162&extension=ts&play_token=7oCMXx5rNt&sn2=
+
+#EXTINF:-1 tvg-id="sixx" tvg-name="sixx" tvg-logo="https://picon-13398.kxcdn.com/sixx.jpg" group-title="", Sixx
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231069&extension=ts&play_token=uXKNZGnFK1&sn2=
+
+#EXTINF:-1 tvg-id="ANIXE" tvg-name="ANIXE" tvg-logo="https://picon-13398.kxcdn.com/anixe.jpg" group-title="", ANIXE
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58191&extension=ts&play_token=4c9YIaRokb&sn2=
+
+#EXTINF:-1 tvg-id="n-tv" tvg-name="n-tv" tvg-logo="https://picon-13398.kxcdn.com/n-tvde.jpg" group-title="", n-tv
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58167&extension=ts&play_token=RcuYajUQdJ&sn2=
+
+#EXTINF:-1 tvg-id="PHOENIX" tvg-name="PHOENIX" tvg-logo="https://picon-13398.kxcdn.com/phoenix.jpg" group-title="", PHOENIX
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231058&extension=ts&play_token=vc1VaxhDln&sn2=
+
+#EXTINF:-1 tvg-id="History HD" tvg-name="History" tvg-logo="https://picon-13398.kxcdn.com/history.jpg" group-title="", History
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58229&extension=ts&play_token=0NERoW8trk&sn2=
+
+#EXTINF:-1 tvg-id="Spiegel Geschichte" tvg-name="Spiegel TV Geschichte" tvg-logo="https://picon-13398.kxcdn.com/spiegelgeschichtede.jpg" group-title="", Spiegel TV Geschichte
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58175&extension=ts&play_token=IAx1z5r194&sn2=
+
+#EXTINF:-1 tvg-id="Spiegel TV Wissen" tvg-name="Spiegel TV Wissen" tvg-logo="https://picon-13398.kxcdn.com/spiegeltvwissen.jpg" group-title="", Spiegel TV Wissen
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58231&extension=ts&play_token=C8H0X1N5dJ&sn2=
+
+#EXTINF:-1 tvg-id="Nat Geo HD" tvg-name="Nat Geo" tvg-logo="https://picon-13398.kxcdn.com/nationalgeographichd.jpg" group-title="", Nat Geo
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58220&extension=ts&play_token=yAwwY0eh3n&sn2=
+
+#EXTINF:-1 tvg-id="NAT GEO WILD" tvg-name="Nat Geo Wild" tvg-logo="https://picon-13398.kxcdn.com/natgeowildhd.jpg" group-title="", Nat Geo Wild
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58219&extension=ts&play_token=D4kSLjFWHb&sn2=
+
+#EXTINF:-1 tvg-id="ONE" tvg-name="ONE" tvg-logo="https://picon-13398.kxcdn.com/onehd.jpg" group-title="", ONE
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58187&extension=ts&play_token=nVFtsaccCZ&sn2=
+
+#EXTINF:-1 tvg-id="Welt der Wunder TV" tvg-name="Welt der Wunder TV" tvg-logo="https://picon-13398.kxcdn.com/weltderwunder.jpg" group-title="", Welt der Wunder TV
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58183&extension=ts&play_token=r32PbYPAot&sn2=
+
+#EXTINF:-1 tvg-id="WDR" tvg-name="WDR" tvg-logo="https://picon-13398.kxcdn.com/wdrhd.jpg" group-title="", WDR
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231067&extension=ts&play_token=rMhhD5lrFV&sn2=
+
+#EXTINF:-1 tvg-id="SWR/SR" tvg-name="SWR" tvg-logo="https://picon-13398.kxcdn.com/swr.jpg" group-title="", SWR
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231066&extension=ts&play_token=5lkZcOh1w6&sn2=
+
+#EXTINF:-1 tvg-id="SRF 1" tvg-name="SRF 1" tvg-logo="https://picon-13398.kxcdn.com/srfernsehenhd.jpg" group-title="", SRF 1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231062&extension=ts&play_token=xNIgjA92iD&sn2=
+
+#EXTINF:-1 tvg-id="ATV" tvg-name="ATV" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/ATV.png" group-title="", ATV
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231061&extension=ts&play_token=3AMPYvE4MH&sn2=
+
+#EXTINF:-1 tvg-id="KiKA" tvg-name="KiKA" tvg-logo="https://picon-13398.kxcdn.com/kika.jpg" group-title="", KiKA
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58172&extension=ts&play_token=pIEPMmP3Hh&sn2=
+
+#EXTINF:-1 tvg-id="Nickelodeon.de" tvg-name="Nickelodeon" tvg-logo="https://picon-13398.kxcdn.com/nickelodeon.jpg" group-title="", Nickelodeon
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58174&extension=ts&play_token=0QU06M7LCD&sn2=
+
+#EXTINF:-1 tvg-id="Cartoon Network" tvg-name="Cartoon Network" tvg-logo="https://picon-13398.kxcdn.com/cartoonnetwork.jpg" group-title="", Cartoon Network
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58241&extension=ts&play_token=smecfHdrEJ&sn2=
+
+#EXTINF:-1 tvg-id="DELUXE MUSIC" tvg-name="DELUXE MUSIC" tvg-logo="https://picon-13398.kxcdn.com/deluxemusichd.jpg" group-title="", DELUXE MUSIC
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58168&extension=ts&play_token=wDxd5IE7yH&sn2=
+
+#EXTINF:-1 tvg-id="13th Street Universal" tvg-name="13th Street" tvg-logo="https://picon-13398.kxcdn.com/skyselect.jpg" group-title="", 13th Street
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58214&extension=ts&play_token=j9YAUza17s&sn2=
+
+#EXTINF:-1 tvg-id="Sky Cinema Premieren" tvg-name="Sky Cinema" tvg-logo="https://picon-13398.kxcdn.com/skycinema.jpg" group-title="", Sky Cinema
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58203&extension=ts&play_token=010SsJkNc9&sn2=
+
+#EXTINF:-1 tvg-id="Sky Cinema Premieren +1" tvg-name="Sky Cinema +1" tvg-logo="https://picon-13398.kxcdn.com/skycinema.jpg" group-title="", Sky Cinema +1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58204&extension=ts&play_token=zU4S2IgxxF&sn2=
+
+#EXTINF:-1 tvg-id="Sky Cinema Premieren +24" tvg-name="Sky Cinema +24" tvg-logo="https://picon-13398.kxcdn.com/skycinemaplus24hd.jpg" group-title="", Sky Cinema +24
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58205&extension=ts&play_token=WrufggqoKO&sn2=
+
+#EXTINF:-1 tvg-id="Sky Action" tvg-name="Sky Action" tvg-logo="https://picon-13398.kxcdn.com/skycinemaactionhd.jpg" group-title="", Sky Action
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58208&extension=ts&play_token=ulbcNdD9J2&sn2=
+
+#EXTINF:-1 tvg-id="Sky Atlantic HD" tvg-name="Sky Atlantic" tvg-logo="https://picon-13398.kxcdn.com/skyatlantichd.jpg" group-title="", Sky Atlantic
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231210&extension=ts&play_token=NlBPQ83Bkw&sn2=
+
+#EXTINF:-1 tvg-id="Sky Krimi" tvg-name="Sky Krimi" tvg-logo="https://picon-13398.kxcdn.com/skykrimi.jpg" group-title="", Sky Krimi
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231211&extension=ts&play_token=qs5WXKnZFR&sn2=
+
+#EXTINF:-1 tvg-id="Sky Cinema Fun" tvg-name="Sky Cinema Fun" tvg-logo="https://picon-13398.kxcdn.com/skycinemacomedy.jpg" group-title="", Sky Cinema Fun
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58209&extension=ts&play_token=eI5vh4vBtw&sn2=
+
+#EXTINF:-1 tvg-id="SkyCinemaFamily.de" tvg-name="Sky Cinema Family" tvg-logo="https://picon-13398.kxcdn.com/skycinemafamilyhd.jpg" group-title="", Sky Cinema Family
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58210&extension=ts&play_token=5m9H0bzDvq&sn2=
+
+#EXTINF:-1 tvg-id="Sky Cinema Special HD" tvg-name="Sky Cinema Special" tvg-logo="https://picon-13398.kxcdn.com/skycinemaspecialde.jpg" group-title="", Sky Cinema Special
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58240&extension=ts&play_token=2EGzjBTLWE&sn2=
+
+#EXTINF:-1 tvg-id="Sky Cinema Best Of" tvg-name="Sky Cinema Best Of" tvg-logo="https://picon-13398.kxcdn.com/skycinemade.jpg" group-title="", Sky Cinema Best Of
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=231214&extension=ts&play_token=Qef9BE4stD&sn2=
+
+#EXTINF:-1 tvg-id="TNT Comedy" tvg-name="WB Comedy" tvg-logo="https://picon-13398.kxcdn.com/warnertvcomedy.jpg" group-title="", WB Comedy
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58234&extension=ts&play_token=sLV7JiNd1f&sn2=
+
+#EXTINF:-1 tvg-id="TNT Serie" tvg-name="WB Serie" tvg-logo="https://picon-13398.kxcdn.com/warnertvserie.jpg" group-title="", WB Serie
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58230&extension=ts&play_token=Lzgs8EHd5f&sn2=
+
+#EXTINF:-1 tvg-id="Syfy" tvg-name="SyFy" tvg-logo="https://picon-13398.kxcdn.com/syfyhd.jpg" group-title="", SyFy
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58232&extension=ts&play_token=u9omFGmLUP&sn2=
+
+#EXTINF:-1 tvg-id="CRIME + INVESTIGATION" tvg-name="Crime + Investigation" tvg-logo="https://picon-13398.kxcdn.com/crimeplusinvestigation.jpg" group-title="", Crime + Investigation
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58235&extension=ts&play_token=ZLscGjNaWO&sn2=
+
+#EXTINF:-1 tvg-id="KinoweltTV" tvg-name="KinoweltTV" tvg-logo="https://picon-13398.kxcdn.com/kinowelttv.jpg" group-title="", KinoweltTV
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58212&extension=ts&play_token=UDvBNiOOtn&sn2=
+
+#EXTINF:-1 tvg-id="SPORT1" tvg-name="SPORT1" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/SPORT.png" group-title="", SPORT1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58291&extension=ts&play_token=jz9h18qJkt&sn2=
+
+#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/EURO.png" group-title="", Eurosport 1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58287&extension=ts&play_token=D91rkuF3mG&sn2=
+
+#EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/EURO2.png" group-title="", Eurosport 2
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58288&extension=ts&play_token=35OoCwDEuj&sn2=
+
+#EXTINF:-1 tvg-id="Sky Sport Austria" tvg-name="Sky Sport Austria" tvg-logo="http://live.tvspielfilm.de/static/images/channels/large/SPO-A.png" group-title="", Sky Sport Austria
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58286&extension=ts&play_token=hk18K2rUT6&sn2=
+
+#EXTINF:-1 tvg-id="Sky Sport 1" tvg-name="Sky Sport 1" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-1-de.png" group-title="", Sky Sport 1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58264&extension=ts&play_token=lrxufsSyoC&sn2=
+
+#EXTINF:-1 tvg-id="Sky Sport 2" tvg-name="Sky Sport 2" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-2-de.png" group-title="", Sky Sport 2
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58265&extension=ts&play_token=7VQWuvJRoM&sn2=
+
+#EXTINF:-1 tvg-id="Sky BL 1" tvg-name="Sky BL 1" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-1-de.png" group-title="", Sky BL 1
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58244&extension=ts&play_token=LYrm15kX35&sn2=
+
+#EXTINF:-1 tvg-id="Sky BL 2" tvg-name="Sky BL 2" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-2-de.png" group-title="", Sky BL 2
+http://myf-tv.com:8080/play/live.php?mac=00:1A:79:C6:B8:86&stream=58245&extension=ts&play_token=u7TsqeDicn&sn2=
