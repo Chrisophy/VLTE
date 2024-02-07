@@ -107,6 +107,11 @@ plugin://plugin.video.vavooto/?name=PHOENIX
 plugin://plugin.video.vavooto/?name=PULS+4
 #EXTINF:-1 tvg-id="ProSieben" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/936.png",ProSieben
 plugin://plugin.video.vavooto/?name=PRO+7
+
+#EXTINF:-1 tvg-id="ProSieben" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/936.png",ProSieben(1)
+plugin://plugin.video.joyn/?mode=play_video&video_id=daserste-de-hd-at&stream_type=LIVE
+
+
 #EXTINF:-1 tvg-id="ProSieben Fun" group-title="Standart" tvg-logo="https://upload.wikimedia.org/wikipedia/de/thumb/5/52/ProSieben_Fun_HD_2012.png/320px-ProSieben_Fun_HD_2012.png",ProSieben Fun
 plugin://plugin.video.vavooto/?name=PRO+7+FUN
 #EXTINF:-1 tvg-id="ProSieben MAXX" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/955.png",ProSieben MAXX
@@ -117,7 +122,7 @@ plugin://plugin.video.vavooto/?name=RBB
 plugin://plugin.video.vavooto/?name=RTL
 
 #EXTINF:-1 tvg-id="RTL" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/999.png",RTL(1)
-plugin://plugin.video.rtlgroup.de/?action=LIVE&amp;xdrm=True&amp;xlink=https%3A%2F%2Fwww.tvnow.de%2Flive-tv%2Frtl&amp;mode=playDash&amp;xhighHD=https%3A%2F%2Fbnowlive-a.akamaized.net%2Flive%2Frtlhd%2Fdash%2Frtlhd.mpd
+plugin://plugin.video.rtlgroup.de/?action=LIVE&xdrm=True&xlink=https://www.tvnow.de/live-tv/rtl
 
 #EXTINF:-1 tvg-id="RTL II" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1056.png",RTL 2
 plugin://plugin.video.vavooto/?name=RTL+2
