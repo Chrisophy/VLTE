@@ -23,6 +23,10 @@ plugin://plugin.video.vavooto/?name=ARTE
 plugin://plugin.video.vavooto/?name=AUTO+MOTOR+SPORT
 #EXTINF:-1 tvg-id="BR" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/959.png",BR
 plugin://plugin.video.vavooto/?name=BR
+#EXTINF:-1 tvg-id="Bundesliga1" group-title="Standart" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-1-de.png",Bundesliga 1
+plugin://plugin.video.vavooto/?name=SKY+BUNDESLIGA+1
+#EXTINF:-1 tvg-id="Bundesliga2" group-title="Standart" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/sky-sport-bundesliga-2-de.png",Bundesliga 2
+plugin://plugin.video.vavooto/?name=SKY+BUNDESLIGA+2
 #EXTINF:-1 tvg-id="Cartoon Network" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1032.png",Cartoon Network
 plugin://plugin.video.vavooto/?name=CARTOON+NETWORK
 #EXTINF:-1 tvg-id="Cartoonito" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/lightbg/100x100/451.png",Cartoonito
@@ -31,7 +35,11 @@ plugin://plugin.video.vavooto/?name=CARTOONITO
 plugin://plugin.video.vavooto/?name=VIVA
 #EXTINF:-1 tvg-id="CRIME + INVESTIGATION" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/945.png",CRIME + INVESTIGATION
 plugin://plugin.video.vavooto/?name=A%26E
-#EXTINF:-1 tvg-id="DELUXE MUSIC" group-title="Alle" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1034.png",DELUXE MUSIC
+#EXTINF:-1 tvg-id="DAZN1" group-title="Standart" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/dazn1-de.png",DAZN 1
+plugin://plugin.video.vavooto/?name=DAZN+1
+#EXTINF:-1 tvg-id="DAZN2" group-title="Standart" tvg-logo="https://raw.githubusercontent.com/Chrisophy/slsosgso/master/dazn2-de.png",DAZN 2
+plugin://plugin.video.vavooto/?name=DAZN+2
+#EXTINF:-1 tvg-id="DELUXE MUSIC" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1034.png",DELUXE MUSIC
 plugin://plugin.video.vavooto/?name=DELUXE MUSIC
 #EXTINF:-1 tvg-id="DMAX" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/969.png",DMAX
 plugin://plugin.video.vavooto/?name=DMAX
@@ -163,10 +171,8 @@ plugin://plugin.video.vavooto/?name=SKY+NATURE
 plugin://plugin.video.vavooto/?name=SKY+1
 #EXTINF:-1 tvg-id="Sky Replay" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/img/station/lightbg/320x39/1366.png",Sky Replay
 plugin://plugin.video.vavooto/?name=SKY+REPLAY
-#EXTINF:-1 tvg-id="Sky Showcase" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/lightbg/320x39/1465.png",Sky Showcase
-plugin://plugin.video.vavooto/?name=SKY+SHOWCASE
 #EXTINF:-1 tvg-id="Sony Channel" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/lightbg/100x100/961.png",Sony Channel
-plugin://plugin.video.vavooto/?name=SONY+TV
+plugin://plugin.video.vavooto/?name=SONY+CHANNEL
 #EXTINF:-1 tvg-id="Spiegel Geschichte" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/lightbg/100x100/486.png",Spiegel Geschichte
 plugin://plugin.video.vavooto/?name=SPIEGEL+GESCHICHTE
 #EXTINF:-1 tvg-id="Spiegel TV Wissen" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1246.png",Spiegel TV Wissen
@@ -190,7 +196,7 @@ plugin://plugin.video.vavooto/?name=TELE+5
 #EXTINF:-1 tvg-id="TOGGO plus" group-title="Standart" tvg-logo="https://images.waipu.tv/api/channels/TOGGOPLUS/logosd.png?width=100&height=100",Toggo
 plugin://plugin.video.vavooto/?name=TOGGO+PLUS
 #EXTINF:-1 tvg-id="Universal Channel HD" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/438.png",Universal Channel
-plugin://plugin.video.vavooto/?name=UNIVERSAL
+plugin://plugin.video.vavooto/?name=UNIVERSAL+TV
 #EXTINF:-1 tvg-id="VOX" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1057.png",Vox
 plugin://plugin.video.vavooto/?name=VOX
 #EXTINF:-1 tvg-id="VOXup" group-title="Standart" tvg-logo="https://images.waipu.tv/api/channels/VOXUP/logosd.png?width=100&height=100",Vox UP
@@ -206,7 +212,7 @@ plugin://plugin.video.vavooto/?name=WDR
 #EXTINF:-1 tvg-id="WELT" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1086.png",WELT
 plugin://plugin.video.vavooto/?name=WELT
 #EXTINF:-1 tvg-id="Welt der Wunder TV" group-title="Standart" tvg-logo="https://images.waipu.tv/api/channels/WELTDERWUNDER/logosd.png?width=100&height=100",WELT DER WUNDER
-plugin://plugin.video.vavooto/?name=WELT+DER+Wunder
+plugin://plugin.video.vavooto/?name=WELT+DER+WUNDER
 #EXTINF:-1 tvg-id="ZDF" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1063.png",ZDF
 plugin://plugin.video.vavooto/?name=ZDF
 #EXTINF:-1 tvg-id="ZDFinfo" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1013.png",ZDF info
