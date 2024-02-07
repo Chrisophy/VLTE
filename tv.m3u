@@ -3,8 +3,8 @@
 plugin://plugin.video.vavooto/?name=13TH+STREET
 #EXTINF:-1 tvg-id="3sat" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1006.png",3SAT
 plugin://plugin.video.vavooto/?name=3SAT
-#EXTINF:-1 tvg-id="Das Erste" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1016.png",ARD DAS ERSTE
-plugin://plugin.video.vavooto/?name=ARD DAS ERSTE
+#EXTINF:-1 tvg-id="Das Erste" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1016.png",ARD
+plugin://plugin.video.vavooto/?name=ARD+-+DAS+ERSTE
 #EXTINF:-1 tvg-id="ARD alpha" group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/1007.png",ARD ALPHA
 plugin://plugin.video.vavooto/?name=ARD ALPHA
 #EXTINF:-1 tvg-id="ATV"group-title="Standart" tvg-logo="http://epggw.a1.net/img/station/darkbg/100x100/925.png",ATV
