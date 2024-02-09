@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta
 import socket
 from collections import Counter
 import xml_structure
-#import magenta_DE
+import magenta_DE
 import tvspielfilm_DE
 #import swisscom_CH
 #import horizon
