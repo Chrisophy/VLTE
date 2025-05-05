@@ -2,10 +2,10 @@ import requests, gzip, json, time, os, boto3, uuid, urllib, re
 #from maclist import alllist
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
-try: 
-    from BeautifulSoup import BeautifulSoup
-except ImportError:
-    from bs4 import BeautifulSoup
+#try: 
+#    from BeautifulSoup import BeautifulSoup
+#except ImportError:
+#    from bs4 import BeautifulSoup
     
 datapath = os.path.abspath(os.path.dirname(__file__))
 #datapath = "/sdcard/"
