@@ -1,6 +1,6 @@
 import requests, gzip, json, time, os, boto3, uuid, urllib, re
 #from maclist import alllist
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 #try: 
 #    from BeautifulSoup import BeautifulSoup
@@ -108,7 +108,7 @@ epg.append('		<icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/
 epg.append('	</channel>\n')
 epg.append('\n\n')
 tvdDE_header = {'user-agent': 'PIT-TVdigital-Android/14', 'accept-encoding': 'gzip'}
-tvdDE_channels = requests.get('https://mobile.tvdigital.de/appdata?appVersion=50&bundleId=de.funke.tvdigital', headers=tvdDE_header).json()["channels"]
+tvdDE_channels = requests.get('https://mobile.tvdigital.de/appdata?appVersion=50&bundleId=de.funke.tvdigital', headers=tvdDE_header, timeout=15).json()["channels"]
 for channels in tvdDE_channels: 
 	id = str(channels['id'])
 	name= channels['name'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
@@ -278,7 +278,7 @@ def rep(episode_format, channel_id, item_title, item_starttime, item_endtime, it
 def get_epg(tvs_data_url):
 	channel_id = tvs_data_url.split("/")[0]
 	guide = ["\n"]
-	for playbilllist in requests.get("https://live.tvspielfilm.de/static/broadcast/list/%s" % tvs_data_url, headers=tvsDE_header).json():
+	for playbilllist in requests.get("https://live.tvspielfilm.de/static/broadcast/list/%s" % tvs_data_url, headers=tvsDE_header, timeout=15).json():
 		item_title = playbilllist.get('title')
 		item_description = ""
 		description = playbilllist.get('text')
@@ -301,7 +301,7 @@ def get_epg(tvs_data_url):
 		try:
 			actor_list = list()
 			for role, actor in playbilllist['actors'].items():
-				actor_list.append("%s : %s" % role, actor)
+				actor_list.append("%s : %s" % (role, actor))
 			items_actor = ','.join(actor_list)
 		except: items_actor = ''
 		item_starrating = ''
@@ -452,76 +452,98 @@ for channel in tvsDE_chlist_url:
 """
 
 epg.append('\n\n')
-magentaDE_channels = magentaSession().post(magentaDE_channellist_url, json=magentaDE_get_chlist,headers=magentaDE_header).json()
-for channels in magentaDE_channels["channellist"]:
-	channel_id = channels['contentId'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-	if channel_id not in magentacontentIDs: continue
-	channel_name = channels['name'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-	for image in channels['pictures']:
-		if image['imageType'] == '15':
-			channel_icon = image['href']
-	epg.append(f'	<channel id="{channel_id}">\n')
-	epg.append(f'		<display-name lang="{lang}">{channel_name}</display-name>\n')
-	epg.append(f'		<icon src="{channel_icon}" />\n')
-	epg.append('	</channel>\n')
-		
+try:
+	magentaDE_channels = magentaSession().post(magentaDE_channellist_url, json=magentaDE_get_chlist, headers=magentaDE_header, timeout=15).json()
+	for channels in magentaDE_channels.get("channellist", []):
+		channel_id = channels['contentId'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+		if channel_id not in magentacontentIDs: continue
+		channel_name = channels['name'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+		channel_icon = ''
+		for image in channels.get('pictures', []):
+			if image.get('imageType') == '15':
+				channel_icon = image.get('href', '')
+		epg.append(f'	<channel id="{channel_id}">\n')
+		epg.append(f'		<display-name lang="{lang}">{channel_name}</display-name>\n')
+		epg.append(f'		<icon src="{channel_icon}" />\n')
+		epg.append('	</channel>\n')
+except Exception as e:
+	print(f"[WARN] MagentaTV Senderliste konnte nicht geladen werden: {e}")
+
 epg.append('\n')
-api_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0', 'Content-type': 'application/json;charset=utf-8', 'X-Api-Date-Format': 'iso', 'X-Api-Camel-Case': 'true', 'referer': 'https://streaming.simplitv.at/'}
+api_headers = {
+	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0',
+	'Content-type': 'application/json;charset=utf-8',
+	'X-Api-Date-Format': 'iso',
+	'X-Api-Camel-Case': 'true',
+	'referer': 'https://streaming.simplitv.at/'
+}
 time_start, time_end = get_epgLength(days_to_grab, form="%Y-%m-%dT%H:%M:00.000Z")
 epg_url = "https://api.app.simplitv.at/v1/EpgTile/FilterProgramTiles"
-epg_post = {"platformCodename": "www", "from": time_start, "to": time_end}
-epg_resp = requests.post(epg_url, headers=api_headers, json=epg_post).json()["programs"]
 prg_url = "https://api.app.simplitv.at/v2/Tile/GetTiles"
-prg_post = {"platformCodename": "www", "requestedTiles": [{"id": a["id"]} for i in epg_resp.keys() for a in epg_resp[i] if i == "puls24"]}
-epg_data = requests.post(prg_url, headers=api_headers, json=prg_post).json()["tiles"]
-for program in epg_data:
-	item_starttime=program["start"].split('+')[0].replace("-", "").replace("T", "").replace(":", "")
-	item_endtime = program["stop"].split('+')[0].replace("-", "").replace("T", "").replace(":", "")
-	items_genre = program.get('categories', "")[-1]['name'] if len(program.get("categories", [])) > 0 else ""
-	item_country = ', '.join([i['name'] for i in program['countries']]) if len(program.get("countries", [])) > 0 else ""
-	item_description = program.get("description").replace("\n\n", "")
-	item_title = program.get("title")
-	try: item_picture = program["images"][0]["url"]
-	except: item_picture = ""
-	item_season = program.get('seasonNumber', "")
-	item_episode = program.get("episodeNumber", "")
-	item_subtitle = program.get("subTitle", "")
-	item_date = program.get("date", "")
-	item_agerating = program.get("ageRating", "")
-	item_starrating = ""
-	actor, director, producer, desc = [], [], [], []
-	if len(program.get("people", [])) > 0:
-		c = {}
-		for i in program["people"]:
-			if i["roleCodename"] == "director": director.append(i["fullName"])
-			elif i["roleName"] == "Produzent": producer.append(i["fullName"])
-			elif i["roleCodename"] == "actor": actor.append(i["fullName"])
-			else: desc.append("%s : %s" % (i["roleName"], i["fullName"]))
-	items_director = ', '.join(director)
-	items_producer = ', '.join(producer)
-	items_actor = ', '.join(actor)
-	item_description+= "\n"+', '.join(desc)
-	rep('onscreen', "PULS24", item_title, item_starttime, item_endtime, item_description, item_country, item_picture, item_subtitle, items_genre, item_date, item_season, item_episode, item_agerating, item_starrating, items_director, items_producer, items_actor, False, lang)
+epg_post = {"platformCodename": "www", "from": time_start, "to": time_end}
+
+try:
+	epg_resp = requests.post(epg_url, headers=api_headers, json=epg_post, timeout=15).json().get("programs", {})
+	prg_post = {
+		"platformCodename": "www",
+		"requestedTiles": [{"id": a["id"]} for k, v in epg_resp.items() if k == "puls24" for a in v]
+	}
+	epg_data = requests.post(prg_url, headers=api_headers, json=prg_post, timeout=15).json().get("tiles", []) if prg_post["requestedTiles"] else []
+	for program in epg_data:
+		item_starttime = program["start"].split('+')[0].replace("-", "").replace("T", "").replace(":", "")
+		item_endtime = program["stop"].split('+')[0].replace("-", "").replace("T", "").replace(":", "")
+		items_genre = program.get('categories', [])[-1]['name'] if len(program.get("categories", [])) > 0 else ""
+		item_country = ', '.join([i['name'] for i in program.get('countries', [])]) if len(program.get("countries", [])) > 0 else ""
+		item_description = (program.get("description") or "").replace("\n\n", "")
+		item_title = program.get("title")
+		try: item_picture = program["images"][0]["url"]
+		except: item_picture = ""
+		item_season = program.get('seasonNumber', "")
+		item_episode = program.get("episodeNumber", "")
+		item_subtitle = program.get("subTitle", "")
+		item_date = program.get("date", "")
+		item_agerating = program.get("ageRating", "")
+		item_starrating = ""
+		actor, director, producer, desc = [], [], [], []
+		for i in program.get("people", []) or []:
+			if i.get("roleCodename") == "director": director.append(i.get("fullName", ""))
+			elif i.get("roleName") == "Produzent": producer.append(i.get("fullName", ""))
+			elif i.get("roleCodename") == "actor": actor.append(i.get("fullName", ""))
+			else: desc.append("%s : %s" % (i.get("roleName", ""), i.get("fullName", "")))
+		items_director = ', '.join(filter(None, director))
+		items_producer = ', '.join(filter(None, producer))
+		items_actor = ', '.join(filter(None, actor))
+		if desc:
+			item_description += "\n" + ', '.join(desc)
+		rep('onscreen', "PULS24", item_title, item_starttime, item_endtime, item_description, item_country, item_picture, item_subtitle, items_genre, item_date, item_season, item_episode, item_agerating, item_starrating, items_director, items_producer, items_actor, False, lang)
+except Exception as e:
+	print(f"[WARN] SimpliTV EPG (PULS24) übersprungen: {e}")
 
 epg.append('\n')
 broadcast_files = {}
 ids = [71, 37, 38,39,40,44,41,42,56,58,770,277,507,769,763,12033,12193,783,532,46,47,51,50,49,48,52,64,504,564,656,57,43,771,485,568,597,551,194,104,146,659,276,537,4003,4005,12125,100,66,175,12045,12043,511,70,115,761,54,55,757,759,402,59,60,610,12042,613,614,12195,603,12148,12147,633,450,12046,767,615,12178,12184,782,452,625,627,138,453,626,471,472,590,12035,4004,552,154,531,133,1183,468,4002,558,492,766,765,527,528,529,451,778,756, 12188,12189]
 day_to_start = datetime(today.year, today.month, today.day, hour=00, minute=00, second=1)
-for i in range(0, days_to_grab):
-	day_to_grab = int(datetime.timestamp(day_to_start))
-	day_to_start += timedelta(days=1)
-	params = '{"date":%s,"channels":%s}' % (day_to_grab, ids)
-	for a in requests.get("https://mobile.tvdigital.de/programbystation?data="+urllib.parse.quote(params)+"&tmpl=app&device=androidv14&displayDensity=200&sdkInt=35").json():
-		broad = []
-		for b in a["broadcasts"]:
-			broad.append(b["id"])
-		params = '{"broadcasts":%s}' % broad
-		for t in requests.get("https://mobile.tvdigital.de/broadcastdetails?data="+urllib.parse.quote(params)+"&tmpl=app&device=androidv14&displayDensity=200&sdkInt=35").json():
-			contentID = t.get("n")
-			if contentID and contentID not in broadcast_files: 
-				broadcast_files[contentID] = []
-			if contentID:
-				broadcast_files[contentID].append(t)
+try:
+	for i in range(0, days_to_grab):
+		day_to_grab = int(datetime.timestamp(day_to_start))
+		day_to_start += timedelta(days=1)
+		params = '{"date":%s,"channels":%s}' % (day_to_grab, ids)
+		for a in requests.get("https://mobile.tvdigital.de/programbystation?data="+urllib.parse.quote(params)+"&tmpl=app&device=androidv14&displayDensity=200&sdkInt=35", timeout=15).json():
+			broad = []
+			for b in a.get("broadcasts", []):
+				broad.append(b["id"])
+			if not broad:
+				continue
+			b_params = '{"broadcasts":%s}' % broad
+			for t in requests.get("https://mobile.tvdigital.de/broadcastdetails?data="+urllib.parse.quote(b_params)+"&tmpl=app&device=androidv14&displayDensity=200&sdkInt=35", timeout=15).json():
+				contentID = t.get("n")
+				if contentID and contentID not in broadcast_files: 
+					broadcast_files[contentID] = []
+				if contentID:
+					broadcast_files[contentID].append(t)
+except Exception as e:
+	print(f"[WARN] TVdigital EPG-Abruf unvollständig: {e}")
+
 for contentID in ids:
 	for playbilllist in broadcast_files.get(contentID, []):
 		try:
@@ -551,56 +573,59 @@ for contentID in ids:
 				items_actor = ','.join(actor_list)
 				items_director = ','.join(director_list)
 			items_producer, item_starrating = "", ""
-			item_starttime = datetime.utcfromtimestamp(item_starttime).strftime('%Y%m%d%H%M%S')
-			item_endtime = datetime.utcfromtimestamp(item_endtime).strftime('%Y%m%d%H%M%S')
+			item_starttime = datetime.fromtimestamp(item_starttime, tz=timezone.utc).strftime('%Y%m%d%H%M%S')
+			item_endtime = datetime.fromtimestamp(item_endtime, tz=timezone.utc).strftime('%Y%m%d%H%M%S')
 			if item_episode: item_episode = re.sub(r"\D+", '#', item_episode).split('#')[0]
 			if item_season: item_season = re.sub(r"\D+", '#', item_season).split('#')[0]
 			if not item_description: item_description = 'No Program Information available'
 			rep(episode_format, contentID, item_title, item_starttime, item_endtime,item_description, item_country, item_picture, item_subtitle,items_genre, item_date, item_season, item_episode, item_agerating, item_starrating, items_director,items_producer, items_actor, enable_rating_mapper, lang)
-		except (KeyError, IndexError): pass
+		except (KeyError, IndexError, TypeError, ValueError): pass
 
 
 epg.append('\n')
 starttime, endtime = get_epgLength(days_to_grab, form="%Y%m%d%H%M%S")
 for contentID in magentacontentIDs:
-	magentaDE_data = {'channelid': contentID, 'type': '2', 'offset': '0', 'count': '-1', 'isFillProgram': '1','properties': '[{"name":"playbill","include":"ratingForeignsn,id,channelid,name,subName,starttime,endtime,cast,casts,country,producedate,ratingid,pictures,type,introduce,foreignsn,seriesID,genres,subNum,seasonNum"}]','endtime': endtime, 'begintime': starttime}
-	magentaData = magentaSession().post(magentaDE_data_url, json=magentaDE_data, headers=magentaDE_header).json()['playbilllist']
-	for playbilllist in magentaData:
-		item_title = playbilllist.get('name')
-		item_starttime = playbilllist.get('starttime')
-		item_endtime = playbilllist.get('endtime')
-		item_description = playbilllist.get('introduce')
-		item_country = playbilllist.get('country')
-		try: item_picture = playbilllist['pictures'][1]['href']
-		except (KeyError, IndexError): item_picture = ''
-		item_subtitle = playbilllist.get('subName')
-		items_genre = playbilllist.get('genres')
-		item_date = playbilllist.get('producedate')
-		item_season = playbilllist.get('seasonNum')
-		item_episode = playbilllist.get('subNum')
-		item_agerating = playbilllist.get('ratingid')
-		try: items_director = playbilllist['cast']['director']
-		except (KeyError, IndexError): items_director = ''
-		try: items_producer = playbilllist['cast']['producer']
-		except (KeyError, IndexError): items_producer = ''
-		actor = []
-		try: 
-			casts =  playbilllist.get('casts')
-			if casts: actor  = [i["castName"] for i in casts]
-		except: actor = []
-		items_actor = ", ".join(actor)
-		item_starrating = ''
-		if item_date:
-			item_date = item_date.split('-')
-			item_date = item_date[0]
-		if item_starttime and item_endtime:
-			start = item_starttime.split(' UTC')
-			item_starttime = start[0].replace(' ', '').replace('-', '').replace(':', '')
-			stop = item_endtime.split(' UTC')
-			item_endtime = stop[0].replace(' ', '').replace('-', '').replace(':', '')
-		if item_country: item_country = item_country.upper()
-		if item_agerating == '-1': item_agerating = ''
-		rep(episode_format, contentID, item_title, item_starttime, item_endtime, item_description, item_country, item_picture, item_subtitle, items_genre, item_date, item_season, item_episode, item_agerating, item_starrating, items_director, items_producer, items_actor, enable_rating_mapper, lang)
+	try:
+		magentaDE_data = {'channelid': contentID, 'type': '2', 'offset': '0', 'count': '-1', 'isFillProgram': '1','properties': '[{"name":"playbill","include":"ratingForeignsn,id,channelid,name,subName,starttime,endtime,cast,casts,country,producedate,ratingid,pictures,type,introduce,foreignsn,seriesID,genres,subNum,seasonNum"}]','endtime': endtime, 'begintime': starttime}
+		magentaData = magentaSession().post(magentaDE_data_url, json=magentaDE_data, headers=magentaDE_header, timeout=15).json().get('playbilllist', [])
+		for playbilllist in magentaData:
+			item_title = playbilllist.get('name')
+			item_starttime = playbilllist.get('starttime')
+			item_endtime = playbilllist.get('endtime')
+			item_description = playbilllist.get('introduce')
+			item_country = playbilllist.get('country')
+			try: item_picture = playbilllist['pictures'][1]['href']
+			except (KeyError, IndexError): item_picture = ''
+			item_subtitle = playbilllist.get('subName')
+			items_genre = playbilllist.get('genres')
+			item_date = playbilllist.get('producedate')
+			item_season = playbilllist.get('seasonNum')
+			item_episode = playbilllist.get('subNum')
+			item_agerating = playbilllist.get('ratingid')
+			try: items_director = playbilllist['cast']['director']
+			except (KeyError, IndexError): items_director = ''
+			try: items_producer = playbilllist['cast']['producer']
+			except (KeyError, IndexError): items_producer = ''
+			actor = []
+			try: 
+				casts =  playbilllist.get('casts')
+				if casts: actor  = [i["castName"] for i in casts]
+			except: actor = []
+			items_actor = ", ".join(actor)
+			item_starrating = ''
+			if item_date:
+				item_date = item_date.split('-')
+				item_date = item_date[0]
+			if item_starttime and item_endtime:
+				start = item_starttime.split(' UTC')
+				item_starttime = start[0].replace(' ', '').replace('-', '').replace(':', '')
+				stop = item_endtime.split(' UTC')
+				item_endtime = stop[0].replace(' ', '').replace('-', '').replace(':', '')
+			if item_country: item_country = item_country.upper()
+			if item_agerating == '-1': item_agerating = ''
+			rep(episode_format, contentID, item_title, item_starttime, item_endtime, item_description, item_country, item_picture, item_subtitle, items_genre, item_date, item_season, item_episode, item_agerating, item_starrating, items_director, items_producer, items_actor, enable_rating_mapper, lang)
+	except Exception as e:
+		print(f"[WARN] MagentaTV EPG für Sender {contentID} übersprungen: {e}")
 		
 epg.append('\n</tv>\n')
 
